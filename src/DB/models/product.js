@@ -40,7 +40,5 @@ const productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-productSchema.add({size: {type: String, require: true}})
-
 
 module.exports = mongoose.model("Product", productSchema);
