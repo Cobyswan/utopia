@@ -16,3 +16,9 @@ exports.createProduct = (req, res) => {
     res.json({ data, message: "Product created successfuly" });
   });
 };
+
+exports.getProducts = (req, res) => {
+  Product.find({}, function (err, products) {
+    res.status(200).json(products)
+  }).catch(err => console.log(err))
+}

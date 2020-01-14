@@ -1,20 +1,30 @@
-import React, { useState } from "react";
 
-export default function Product(props) {
-  const [productTitle, setProductTitle] = useState("");
-  const [productPrice, setProductPrice] = useState(0);
-  const [productDescription, setProductDescription] = useState("");
-  const [productImage, setProductImage] = useState("");
+import React, { Component } from 'react'
+import axios from 'axios'
 
-  return (
-    <div className="mainProductContainer">
-      <div className="productImageContainer">
-        <img>{productImage}</img>
+
+export default class Product extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       products: []
+    }
+  }
+
+  componentDidMount(){
+    axios.get(`http://localhost:8000/api/products`).then(res => {
+      console.log(res.data)
+      this.setState({products: res.data})
+    })
+  }
+  render() {
+    console.log(this.state.products)
+    return (
+      <div>
+        Products
       </div>
-      <div className="productInfoContainer">
-        <div className="productTitle">{productTitle}</div>
-        <div className="productPrice">{productPrice}</div>
-      </div>
-    </div>
-  );
+    )
+  }
 }
+
