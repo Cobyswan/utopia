@@ -1,0 +1,17 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+.links {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.links, .logo {
+    padding: 0px 10px;
+}
