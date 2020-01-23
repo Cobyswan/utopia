@@ -3,12 +3,13 @@ import './App.css';
 import Product from './Components/Product/Product';
 import Header from './Components/Header/Header';
 import ProductList from './Components/ProductList/ProductList';
+import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
         <Header></Header>
-        <ProductList></ProductList>
+        <Routes></Routes>
     </div>
   );
 }

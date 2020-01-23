@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './header.css'
+import { Link, Redirect } from 'react-router-dom'
 
 export class Header extends Component {
     render() {
         return (
             <div className='headerContainer'>
-                <div className='logo'>UTOPIA</div>
+                <Link to='/'>UTOPIA</Link>
                 <div className='links'>
-                <div>Contact</div>
+                <Link to='/contact'>Contact</Link>
                 <div>Cart</div>
                 </div>
             </div>
