@@ -21,18 +21,18 @@ export default class Product extends Component {
         className="productContainer"
       >
         <div className="imageContainer">
-          <img style={{width: 300}} className="productImage" src={this.props.image} />
+          <img style={{width: 250, height: 250}} className="productImage" src={this.props.image} />
         </div>
         <div className="productInfoContainer">
           {this.state.isShown ? (
             <div>
-              <h1>{this.props.title}</h1>
+              <h3>{this.props.title}</h3>
               <p>${this.props.price}</p>
             </div>
           ) : (
             <div>
-            <h1>{this.props.title}</h1>
-            <p style={{color: 'white'}}>placeholder</p>
+            <h3>{this.props.title}</h3>
+            <p style={{color: 'black'}}>placeholder</p>
             </div>
           )}
         </div>
