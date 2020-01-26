@@ -9,7 +9,7 @@ export class ProductList extends Component {
     super(props);
 
     this.state = {
-      products: testProduct.default
+      products: []
     };
   }
 

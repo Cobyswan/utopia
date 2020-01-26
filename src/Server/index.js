@@ -7,6 +7,7 @@ const authorizationRoutes = require("./Routes/authorizationRoutes");
 const userRoutes = require("./Routes/userRoutes");
 const productRoutes = require("./Routes/productRoutes");
 const categoryRoutes = require("./Routes/categoryRoutes");
+const cors = require('cors')
 require('dotenv').config({ path: require('find-config')('.env') })
 
 const app = express();
@@ -14,6 +15,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
+app.use(cors())
 
 // app.use("/api", authorizationRoutes);
 // app.use("/api", userRoutes);

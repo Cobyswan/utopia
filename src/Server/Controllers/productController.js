@@ -19,6 +19,7 @@ exports.createProduct = (req, res) => {
 
 exports.getProducts = (req, res) => {
   Product.find({}, function (err, products) {
+    console.log(products)
     res.status(200).json(products)
   }).catch(err => console.log(err))
 }
