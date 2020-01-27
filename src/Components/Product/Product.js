@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
-import testProduct from "../../TestData/testProduct";
 import "./product.css";
 
 export default class Product extends Component {
@@ -21,7 +19,7 @@ export default class Product extends Component {
         className="productContainer"
       >
         <div className="imageContainer">
-          <img style={{width: 250, height: 250}} className="productImage" src={this.props.image} />
+          <img style={{width: 250, height: 250}} className="productImage" src={this.props.image} alt='nah'/>
         </div>
         <div className="productInfoContainer">
           {this.state.isShown ? (

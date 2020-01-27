@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Product from "../Product/Product";
-import testProduct from "../../TestData/testProduct";
 import axios from "axios";
 import "./productList.css";
+import { Link } from "react-router-dom";
 
 export class ProductList extends Component {
   constructor(props) {
@@ -24,11 +24,11 @@ export class ProductList extends Component {
     console.log(this.state.products);
     let productMap = this.state.products.map(product => {
       return (
-        <Product
+        <Link to={`/product/${product._id}`}><Product
           title={product.name}
           price={product.price}
           image={product.image}
-        />
+        /></Link>
       );
     });
 

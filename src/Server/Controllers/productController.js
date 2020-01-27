@@ -23,3 +23,12 @@ exports.getProducts = (req, res) => {
     res.status(200).json(products)
   }).catch(err => console.log(err))
 }
+
+exports.getProduct = (req, res) => {
+  let {_id} = req.params;
+  console.log(_id)
+  Product.find({_id}, function (err, product) {
+    console.log(product)
+    res.status(200).json(product)
+  }).catch(err => console.log(err))
+}
