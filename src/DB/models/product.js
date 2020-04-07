@@ -23,12 +23,12 @@ const productSchema = new mongoose.Schema(
       trim: true,
       require: true,
     },
-    size: { 
-      type: String,
-      require: true, 
-    },
+    // size: { 
+    //   type: String,
+    //   require: true, 
+    // },
     stock: {
-      type: Number,
+      type: Object,
       require: true
     }
     // category: {
