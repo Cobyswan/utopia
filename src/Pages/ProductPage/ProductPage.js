@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Size from "../../Components/Size/Size";
 
 export default class ProductPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      product: []
+      product: [],
+      small: false,
+      medium: false,
+      large: false,
+      xl: false,
+      xxl: false
     };
   }
 
@@ -14,14 +20,14 @@ export default class ProductPage extends Component {
     axios
       .get(`http://localhost:8000/api/product/${this.props.match.params._id}`)
       .then(res => {
-        console.log(res.data);
         this.setState({ product: res.data[0] });
       });
   }
 
+
+
   render() {
     let { product } = this.state;
-    console.log(this.state.product);
     return (
       <div
         className="productPageContainer"
@@ -54,11 +60,41 @@ export default class ProductPage extends Component {
           alignItems: "center",
           width: '100%'
         }}>
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
-            <button>Xl</button>
-            <button>XXL</button>
+            {
+              (product.stock)
+              ?
+            <Size stock={product.stock} size={'small'}></Size>
+            :
+            <div>Getting stock...</div>
+            }
+            {
+              (product.stock)
+              ?
+            <Size stock={product.stock} size={'medium'}></Size>
+            :
+            <div>Getting stock...</div>
+            }
+            {
+              (product.stock)
+              ?
+            <Size stock={product.stock} size={'large'}></Size>
+            :
+            <div>Getting stock...</div>
+            }
+            {
+              (product.stock)
+              ?
+            <Size stock={product.stock} size={'xl'}></Size>
+            :
+            <div>Getting stock...</div>
+            }
+            {
+              (product.stock)
+              ?
+            <Size stock={product.stock} size={'xxl'}></Size>
+            :
+            <div>Getting stock...</div>
+            }
           </div>
           <p>{product.description}</p>
         </div>

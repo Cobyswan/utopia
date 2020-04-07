@@ -15,19 +15,14 @@ export class ProductList extends Component {
 
   componentDidMount() {
     axios.get(`http://localhost:8000/api/products`).then(res => {
-      console.log(res.data);
       this.setState({ products: res.data });
     });
   }
 
   render() {
-    console.log(this.state.products);
-    let productMap = this.state.products.map(product => {
+    let productMap = this.state.products.map((product, i) => {
       return (
-        <Link to={`/product/${product._id}`}><Product
-          title={product.name}
-          price={product.price}
-          image={product.image}
+        <Link style={{height: '25em', border: 'solid red 1px'}} key={i} to={`/product/${product._id}`}><Product price={product.price} image={product.image} name={product.name}
         /></Link>
       );
     });

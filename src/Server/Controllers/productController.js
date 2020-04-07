@@ -9,7 +9,7 @@ exports.createProduct = (req, res) => {
   }
   const product = new Product(req.body);
   product.save((err, data) => {
-    console.log(product)
+    console.log('created product', product)
     if (err || !data) {
       return res.status(400).json({ error: errorHandler(err) });
     }
@@ -19,7 +19,7 @@ exports.createProduct = (req, res) => {
 
 exports.getProducts = (req, res) => {
   Product.find({}, function (err, products) {
-    console.log(products)
+    console.log('Controller', products)
     res.status(200).json(products)
   }).catch(err => console.log(err))
 }
