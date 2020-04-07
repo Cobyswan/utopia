@@ -1,0 +1,10 @@
+.inStockButton, .outOfStockButton {
+    background-color: black;
+    color: white;
+    width: 75px;
+    height: 35px;
+}
+
+.outOfStockButton {
+    opacity: 50%;
+}

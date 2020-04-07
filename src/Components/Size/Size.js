@@ -1,14 +1,15 @@
 import React from 'react'
+import './size.css'
 
 
 export default function Size(props) {
     let { size, stock } = props
     let getStock = () => {
         if (stock[size] >= 1) {
-            return <button>{size}</button>
+            return <button className='inStockButton'>{size.toUpperCase()}</button>
         }
         else {
-            return <button disabled style={{ color: 'black' }}>{size}no stock</button>
+            return <button className='outOfStockButton' disabled>{size.toUpperCase()}</button>
         }
 
     }
