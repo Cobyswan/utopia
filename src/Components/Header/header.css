@@ -5,6 +5,7 @@
     background-color: black;
     color: white;
     height: 50px;
+    width: 100vw;
 }
 .links {
     display: flex;

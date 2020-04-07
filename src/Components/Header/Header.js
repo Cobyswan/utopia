@@ -6,7 +6,7 @@ export class Header extends Component {
   render() {
     return (
       <div className="headerContainer">
-        <Link to="/">UTOPIA</Link>
+        <Link className='logo' to="/">UTOPIA</Link>
         <div className="links">
           <Link to="/contact">Contact</Link>
           <div>Cart</div>
