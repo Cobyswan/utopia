@@ -12,7 +12,6 @@ export default class Product extends Component {
 
 
   render() {
-    console.log(this.props.name)
     return (
       <div
         onMouseEnter={() => this.setState({ isShown: true })}
@@ -20,7 +19,7 @@ export default class Product extends Component {
         className="productContainer"
       >
         <div className="imageContainer">
-          <img style={{width: '25em', height: '25em',}} className="productImage" src={this.props.image} alt='nah'/>
+          <img  className="productImage" src={this.props.image} alt='nah'/>
         </div>
         <div className="productInfoContainer">
           {this.state.isShown ? (
@@ -30,7 +29,6 @@ export default class Product extends Component {
           ) : (
             <div>
             <h3 className='pListTitle' style={{color:'white'}}>{this.props.name}</h3>
-            <p style={{color:'white'}}>placeholder</p>
             </div>
           )}
         </div>

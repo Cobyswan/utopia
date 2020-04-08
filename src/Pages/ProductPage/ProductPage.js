@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Size from "../../Components/Size/Size";
+import './ProductPage.css'
 
 export default class ProductPage extends Component {
   constructor(props) {
@@ -31,69 +32,56 @@ export default class ProductPage extends Component {
     return (
       <div
         className="productPageContainer"
-        style={{
-          color: "white",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          height: "90vh"
-        }}
       >
         <div className="productImageCOntainer">
-          <img src={product.image} alt='nah'/>
+          <img src={product.image} alt='nah' />
         </div>
         <div
           className="productInfoContainer"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: 'flex-start'
-          }}
         >
-          <h2>{product.name}</h2>
+          {
+            product.name
+              ?
+              <h2>{product.name.toUpperCase()}</h2>
+              :
+              <h2></h2>
+          }
           <h3>${product.price}</h3>
-          <div className="sizeContainer" style={{
-          color: "white",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: '100%'
-        }}>
+          <div className="sizeContainer">
             {
               (product.stock)
-              ?
-            <Size stock={product.stock} size={'small'}></Size>
-            :
-            <div>Getting stock...</div>
+                ?
+                <Size stock={product.stock} size={'small'}></Size>
+                :
+                <div>Getting stock...</div>
             }
             {
               (product.stock)
-              ?
-            <Size stock={product.stock} size={'medium'}></Size>
-            :
-            <div>Getting stock...</div>
+                ?
+                <Size stock={product.stock} size={'medium'}></Size>
+                :
+                <div>Getting stock...</div>
             }
             {
               (product.stock)
-              ?
-            <Size stock={product.stock} size={'large'}></Size>
-            :
-            <div>Getting stock...</div>
+                ?
+                <Size stock={product.stock} size={'large'}></Size>
+                :
+                <div>Getting stock...</div>
             }
             {
               (product.stock)
-              ?
-            <Size stock={product.stock} size={'xl'}></Size>
-            :
-            <div>Getting stock...</div>
+                ?
+                <Size stock={product.stock} size={'xl'}></Size>
+                :
+                <div>Getting stock...</div>
             }
             {
               (product.stock)
-              ?
-            <Size stock={product.stock} size={'xxl'}></Size>
-            :
-            <div>Getting stock...</div>
+                ?
+                <Size stock={product.stock} size={'xxl'}></Size>
+                :
+                <div>Getting stock...</div>
             }
           </div>
           <p>{product.description}</p>

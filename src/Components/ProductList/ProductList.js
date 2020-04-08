@@ -22,7 +22,7 @@ export class ProductList extends Component {
   render() {
     let productMap = this.state.products.map((product, i) => {
       return (
-        <Link style={{height: '25em', border: 'solid red 1px'}} key={i} to={`/product/${product._id}`}><Product price={product.price} image={product.image} name={product.name}
+        <Link className='productLinkStyle' key={i} to={`/product/${product._id}`}><Product price={product.price} image={product.image} name={product.name}
         /></Link>
       );
     });

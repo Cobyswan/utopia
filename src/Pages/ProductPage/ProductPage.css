@@ -1,0 +1,23 @@
+.productPageContainer {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh
+}
+
+.productInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sizeContainer {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: '100%';
+}
+

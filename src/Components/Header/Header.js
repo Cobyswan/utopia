@@ -6,10 +6,11 @@ export class Header extends Component {
   render() {
     return (
       <div className="headerContainer">
-        <Link className='logo' to="/">UTOPIA</Link>
+        <Link style={{textDecoration: 'none', color: 'white'}} className='logo' to="/">UTOPIA</Link>
         <div className="links">
-          <Link to="/contact">Contact</Link>
-          <div>Cart</div>
+          <Link style={{textDecoration: 'none', color: 'white'}} className='contactText' to="/contact">CONTACT</Link>
+          <div className='divider'> / </div>
+          <div style={{textDecoration: 'none', color: 'white'}} >CART</div>
         </div>
       </div>
     );

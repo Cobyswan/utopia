@@ -1,4 +1,5 @@
 .headerContainer {
+    font-family: Roboto Mono;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,13 +7,23 @@
     color: white;
     height: 50px;
     width: 100vw;
+    
 }
 .links {
     display: flex;
-    width: 100px;
     justify-content: space-between;
+    margin-right: 1em;
+    font-size: 1em;
 }
 
 .links, .logo {
-    padding: 10px 30px;
+    padding: 2em;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+.divider {
+    margin-left: .5em;
+    margin-right: .5em;
 }

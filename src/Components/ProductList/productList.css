@@ -1,21 +1,21 @@
 body {
     background-color: black;
     color: white;
+    font-family: Roboto Mono;
 }
 
-.productListContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px;
-}
 .productListWrapper {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productListContainer {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+}
+
+.productLinkStyle {
+    text-decoration: none;
 }
